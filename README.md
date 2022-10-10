@@ -1,9 +1,9 @@
 # Automatic-Category-markerCluster-Map
 ## General Description
-A mapping tool that creates a map and marks every point of data from a data set. These points are automatically sorted by their NAICS industry and can be manually hidden/clustered with the layer control menu at the top right. The map also contains a search feature for specific addresses, provides addational information when markers are clicked, and gives the lattitude and longitutde of position wherever the user clicks on the map.
+A mapping tool that creates a map and marks every point of data from a data set. These points are automatically sorted by their given category and can be manually hidden/clustered with the layer control menu at the top right. The map also contains a search feature for specific addresses, provides addational information when markers are clicked, and gives the lattitude and longitutde of position wherever the user clicks on the map.
 
 ## Demo Code + Instructions
-[Demo](https://leafletmapdemoedugion.surge.sh/) with first 800 points.
+[Demo](https://leafletmapdemo.surge.sh/) with list of companies, schools, and parks in the US (724 markers).
 
 To use this map, follow instructions on how to use plugin for marker clustering at https://github.com/Leaflet/Leaflet.markercluster . In my code, I moved the `dist` folder out of the `Leaflet.markercluster-1.4.1` folder and into the same space as the programs. (I also have `nonde_modules` but I am not sure where it came from)
 The demo code provided has four different map layouts for the user to select from, and automatically has clustering selected to reduce lag when the map is opened. It also randomly assaigns a color to different NAICS codes and to the marker points; the color is shown in the layer control which also acts as a legend. 
@@ -13,7 +13,7 @@ The demo code provided has four different map layouts for the user to select fro
 ## Opportunities for Optimization / Customization
 The demo code uses circle markers instead of the regular upside-down tear-drop marker because circle markers reduce lag and can be easily colored. When the map is actually implemented, the markers could be changed to custom icons represeanting NAICS industries. 
 
-The NAICS industries are also given a random color when the map is loaded, which is sub-optimal. If circle markers are kept, then specific colors should be chosen for the different industries. The radius and opacity of the circle markers can also be changed based on preference.
+Categories are also given a random color when the map is loaded, which is sub-optimal. If circle markers are kept, then specific colors should be chosen for the different categories. The radius and opacity of the circle markers can also be changed based on preference. Otherwise, custom markers should be used based on different needs.
 
 In the demo code, four terrein textures are provided. These can be changed and more textures can be added to further the user experience. More free textures can be found at https://leaflet-extras.github.io/leaflet-providers/preview/. Some maps require an API key in order to use them. Also, for some maps, the names in the countries are represeanted by thier native language instead of english.
 
@@ -26,8 +26,6 @@ The two geocoding services I've found that should are the best financially would
 I removed the data points in my demo dataset that did not have a lattitude and longitutde. These points did not have lat/longs partly because I used a free geocoding service and partly because the addresses given from the Excel sheet may be insufficient. Points with invaled lat/longs will automatically be placed at lattitude 0 and longitude 0 on the map.
 
 Make sure that the addresses or names provided from the Stocks List do not have any commas in them, as the program can reads CSV files. Commas can be removed with a little Excel magic. Also, make sure that there are no empty lines in the CSV file, as this will result in an error.
-
-Some of the industry names in the demo have a `"` proceeding them. This is an error with the data and also be corrected in the same way removing commas was.
 
 ## Small Bio of Volodymyr Agafonkin, Leaflet Creator
 
