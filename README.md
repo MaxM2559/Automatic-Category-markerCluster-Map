@@ -3,7 +3,7 @@
 A mapping tool that creates a map and marks every point of data from a data set. These points are automatically sorted by their given category and can be manually hidden/clustered with the layer control menu at the top right. The map also contains a search feature for specific addresses, provides addational information when markers are clicked, and gives the lattitude and longitutde of position wherever the user clicks on the map.
 
 ## Demo Code + Instructions
-[Demo](https://leafletmapdemo.surge.sh/) with list of companies, schools, and parks in the US (724 markers).
+[Demo](https://leafletmapdemo.surge.sh/) with list of 724 companies, schools, and parks in the US (deployed with surge.io).
 
 To use this map, follow instructions on how to use plugin for marker clustering at https://github.com/Leaflet/Leaflet.markercluster . In my code, I moved the `dist` folder out of the `Leaflet.markercluster-1.4.1` folder and into the same space as the programs. (I also have `nonde_modules` but I am not sure where it came from)
 The demo code provided has four different map layouts for the user to select from, and automatically has clustering selected to reduce lag when the map is opened. It also randomly assaigns a color to different NAICS codes and to the marker points; the color is shown in the layer control which also acts as a legend. 
