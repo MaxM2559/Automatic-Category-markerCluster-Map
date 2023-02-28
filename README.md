@@ -2,6 +2,8 @@
 ## General Description
 A mapping tool that creates a map and marks every point of data from a data set. These points are automatically sorted by their given category and can be manually hidden/clustered with the layer control menu at the top right. The map also contains a search feature for specific addresses, provides addational information when markers are clicked, and gives the lattitude and longitutde of position wherever the user clicks on the map.
 
+The focus for this project was a proof of concept that a map representing thousands of data points while being user readible was possible. The focus of the project was not put on aesthetics.
+
 ## Demo Code + Instructions
 [Demo](https://leafletmapdemo.surge.sh/) with list of 724 companies, schools, and parks in the US (deployed with surge.io).
 
